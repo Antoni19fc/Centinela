@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía: Plataforma Centinela y Cuadrantes de Paz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        /* Color Principal Oscuro (Dark Teal) */
+        .color-dark {
+            color: #22929B;
+        }
+        /* Color Principal Naranja (Vibrant Orange) */
+        .color-accent {
+            color: #F58731;
+        }
+        /* Color Secundario Aqua (Light Aqua) */
+        .color-light-accent {
+            color: #9BE3E9;
+        }
+        .flow-arrow {
+            font-size: 2rem;
+            color: #22929B;
+            line-height: 1;
+        }
+        .card {
+            background-color: #FFFFFF;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.1);
+        }
+        .flow-card {
+            border: 2px solid #22929B;
+        }
+        .kpi-number {
+            font-weight: 900;
+            color: #F58731;
+            letter-spacing: -0.025em;
+        }
+    </style>
+</head>
+<body class="text-gray-700">
+    <!-- Palette Name: Custom Vibrant (F58731, 22929B, 9BE3E9, FFFFFF) -->
+    <div class="container mx-auto p-4 md:p-8">
+        
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-extrabold color-dark mb-2">Plataforma Centinela y Cuadrantes de Paz</h1>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">Arquitectura Integral para la Seguridad Ciudadana. Un ecosistema tecnológico para la gestión, desde la alerta del ciudadano hasta el análisis estratégico.</p>
+        </header>
+
+        <main class="space-y-16">
+            
+            <section id="flow" class="text-center">
+                <h2 class="text-3xl font-bold color-dark mb-8">El Circuito de Gestión de Denuncias</h2>
+                <div class="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-4">
+
+                    <div class="card flow-card p-4 text-center w-full md:w-1/5">
+                        <div class="text-4xl mb-2 color-dark">📱</div>
+                        <h3 class="font-bold color-dark">1. Centinela</h3>
+                        <p class="text-sm">Interacción Social y Alerta Inicial</p>
+                    </div>
+
+                    <div class="flow-arrow transform md:rotate-0 rotate-90">→</div>
+                    
+                    <div class="card flow-card p-4 text-center w-full md:w-1/5">
+                        <div class="text-4xl mb-2 color-dark">📥</div>
+                        <h3 class="font-bold color-dark">2. Colector StarGis</h3>
+                        <p class="text-sm">Asignación Operativa</p>
+                    </div>
+
+                    <div class="flow-arrow transform md:rotate-0 rotate-90">→</div>
+                    
+                    <div class="card flow-card p-4 text-center w-full md:w-1/5">
+                        <div class="text-4xl mb-2 color-dark">📊</div>
+                        <h3 class="font-bold color-dark">3. Visualización</h3>
+                        <p class="text-sm">Análisis Táctico y Estratégico</p>
+                    </div>
+
+                    <div class="flow-arrow transform md:rotate-0 rotate-90">→</div>
+
+                    <div class="card flow-card p-4 text-center w-full md:w-1/5">
+                        <div class="text-4xl mb-2 color-dark">✅</div>
+                        <h3 class="font-bold color-dark">4. Sistema TICKET</h3>
+                        <p class="text-sm">Trazabilidad y Cierre</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+                
+                <div class="card p-6 md:col-span-2">
+                    <div class="md:flex md:items-center md:space-x-8">
+                        <div class="text-center md:text-left">
+                           <h3 class="text-2xl font-bold color-dark mb-2">1. Centinela: La Voz del Ciudadano</h3>
+                           <p class="mb-4">La plataforma Centinela actúa como una red social operativa. Al acceder, el sistema geolocaliza al usuario, ubicándolo dentro de su Cuadrante de Paz y Circuito Comunal, permitiendo una comunicación directa con las estructuras de seguridad locales para generar una alerta efectiva.</p>
+                           <div class="flex justify-center md:justify-start space-x-4 text-sm font-semibold">
+                               <span class="bg-[#9BE3E9] text-[#22929B] px-3 py-1 rounded-full">Geolocalización Inmediata</span>
+                               <span class="bg-[#F58731] bg-opacity-20 text-[#F58731] px-3 py-1 rounded-full">Interacción Directa</span>
+                           </div>
+                        </div>
+                        <div class="mt-6 md:mt-0 flex-shrink-0 text-center">
+                            <p class="kpi-number text-7xl">100%</p>
+                            <p class="font-bold text-gray-500">Contexto Geográfico</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card p-6">
+                    <h3 class="text-2xl font-bold text-center color-dark mb-2">2. Colector StarGis: Formalización y Acción</h3>
+                    <p class="text-center mb-4">Las alertas generadas en Centinela se formalizan aquí. Los operadores procesan la incidencia, la validan y la asignan a la unidad policial correspondiente para una atención inmediata, iniciando el ciclo de vida operativo de la denuncia.</p>
+                    <div class="chart-container">
+                        <canvas id="assignmentCycleChart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="card p-6">
+                    <h3 class="text-2xl font-bold text-center color-dark mb-2">3. StarGis: Visualización Geoespacial y Táctica</h3>
+                    <p class="text-center mb-4">El visualizador **StarGis** (SuperMap) integra la información de Centinela sobre una **capa satelital**. Permite a los operadores de la Sala Situacional identificar **focos de incidencia** y desplegar recursos con precisión, basándose en la ubicación exacta del Cuadrante de Paz.</p>
+                    <div class="chart-container">
+                        <canvas id="incidentDensityChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="card p-6">
+                    <h3 class="text-2xl font-bold text-center color-dark mb-2">3. StarGis: Incidencias por Cuadrante (Análisis Geográfico)</h3>
+                    <p class="text-center mb-4">Este gráfico de StarGis ofrece una visión del rendimiento geográfico de los cuadrantes, esencial para la asignación estratégica de recursos y la evaluación de la presión delictiva por zona.</p>
+                    <div class="chart-container">
+                        <canvas id="incidentsByQuadrantChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="card p-6">
+                     <h3 class="text-2xl font-bold text-center color-dark mb-2">3. StarBi: Visión Estratégica (Análisis Estadístico)</h3>
+                    <p class="text-center mb-4">StarBi (Vividime) consume los datos operativos para generar dashboards de **análisis estadístico**. Mide la efectividad, los **tiempos de respuesta** y otros KPIs que apoyan la toma de decisiones estratégicas del alto mando en términos de gestión del rendimiento.</p>
+                    <div class="chart-container">
+                        <canvas id="responseTimesChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="card p-6">
+                    <h3 class="text-2xl font-bold text-center color-dark mb-2">4. Sistema TICKET: Trazabilidad y Cierre</h3>
+                    <p class="text-center mb-4">Cada denuncia se convierte en un ticket para asegurar su seguimiento detallado. Este módulo garantiza la trazabilidad del caso, desde la asignación hasta la corroboración de su atención y cierre efectivo, completando el ciclo.</p>
+                    <ol class="relative border-l border-[#F58731] ml-4 mt-6">                  
+                        <li class="mb-6 ml-6">            
+                            <span class="absolute flex items-center justify-center w-6 h-6 bg-[#22929B] bg-opacity-80 rounded-full -left-3 ring-8 ring-white text-white">1</span>
+                            <h4 class="font-semibold text-gray-700">Registro de Incidencia</h4>
+                        </li>
+                        <li class="mb-6 ml-6">
+                            <span class="absolute flex items-center justify-center w-6 h-6 bg-[#22929B] bg-opacity-80 rounded-full -left-3 ring-8 ring-white text-white">2</span>
+                            <h4 class="font-semibold text-gray-700">Asignación y Atención</h4>
+                        </li>
+                        <li class="mb-6 ml-6">
+                            <span class="absolute flex items-center justify-center w-6 h-6 bg-[#22929B] bg-opacity-80 rounded-full -left-3 ring-8 ring-white text-white">3</span>
+                             <h4 class="font-semibold text-gray-700">Corroboración</h4>
+                        </li>
+                        <li class="ml-6">
+                            <span class="absolute flex items-center justify-center w-6 h-6 bg-[#22929B] bg-opacity-80 rounded-full -left-3 ring-8 ring-white text-white">4</span>
+                            <h4 class="font-semibold text-gray-700">Cierre Efectivo</h4>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </main>
+        
+        <footer class="text-center mt-16 border-t pt-8">
+            <p class="font-bold text-lg color-dark">Soberanía de Datos y Gestión Integral para la Seguridad</p>
+            <p class="text-sm text-gray-500 mt-1">Plataforma Centinela & Cuadrantes de Paz</p>
+        </footer>
+    </div>
+
+    <script>
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+
+        const wrapLabel = (label) => {
+            const maxLength = 16;
+            if (typeof label !== 'string' || label.length <= maxLength) {
+                return label;
+            }
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + ' ' + word).length > maxLength && currentLine.length > 0) {
+                    lines.push(currentLine);
+                    currentLine = word;
+                } else {
+                    currentLine = currentLine ? currentLine + ' ' + word : word;
+                }
+            }
+            if (currentLine) {
+                lines.push(currentLine);
+            }
+            return lines;
+        };
+
+        const chartColors = ['#22929B', '#F58731', '#9BE3E9', '#FFFFFF', '#58508D'];
+
+        new Chart(document.getElementById('assignmentCycleChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Recibido', 'Procesado', 'Asignado'],
+                datasets: [{
+                    label: 'Ciclo de Asignación',
+                    data: [50, 30, 20],
+                    backgroundColor: ['#22929B', '#F58731', '#9BE3E9'],
+                    borderColor: '#ffffff',
+                    borderWidth: 2,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                }
+            }
+        });
+        
+        const incidentLabels = ['Cuadrante P-01 Sucre', 'Cuadrante P-02 El Recreo', 'Cuadrante P-03 La Pastora', 'Cuadrante P-04 San Agustín', 'Cuadrante P-05 La Candelaria'].map(wrapLabel);
+        new Chart(document.getElementById('incidentsByQuadrantChart'), {
+            type: 'bar',
+            data: {
+                labels: incidentLabels,
+                datasets: [{
+                    label: 'Incidencias este mes',
+                    data: [65, 59, 80, 81, 56],
+                    backgroundColor: '#F58731',
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                }
+            }
+        });
+
+        const simulatedDensityData = [
+            { x: 20, y: 30, r: 15, label: 'Zona Alta Densidad Norte' },
+            { x: 40, y: 10, r: 8, label: 'Zona Media Densidad Sur' },
+            { x: 60, y: 50, r: 25, label: 'Zona Crítica Centro Este' },
+            { x: 80, y: 20, r: 12, label: 'Zona Media Densidad Oeste' }
+        ];
+
+        new Chart(document.getElementById('incidentDensityChart'), {
+            type: 'bubble',
+            data: {
+                datasets: [{
+                    label: 'Focos de Incidencia (Simulación Geoespacial)',
+                    data: simulatedDensityData.map(d => ({ x: d.x, y: d.y, r: d.r, label: wrapLabel(d.label) })),
+                    backgroundColor: 'rgba(34, 146, 155, 0.6)', 
+                    borderColor: '#22929B',
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Eje X (Simulación Latitud)',
+                            color: '#F58731'
+                        },
+                        min: 0, max: 100
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Eje Y (Simulación Longitud)',
+                            color: '#F58731'
+                        },
+                        min: 0, max: 100
+                    }
+                }
+            }
+        });
+
+        new Chart(document.getElementById('responseTimesChart'), {
+            type: 'line',
+            data: {
+                labels: ['Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep'],
+                datasets: [{
+                    label: 'Tiempo Promedio de Respuesta (min)',
+                    data: [15.2, 12.5, 11.0, 9.8, 8.5, 7.9],
+                    fill: true,
+                    backgroundColor: 'rgba(245, 135, 49, 0.2)',
+                    borderColor: '#F58731',
+                    tension: 0.1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Minutos'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false,
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
